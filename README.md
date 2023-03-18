@@ -1,4 +1,4 @@
-# Module-4-lab_12
+# Module-4-lab_12 Fake Eccommerce Website
 (Module 4 pg 93) 
 
 # Steps
