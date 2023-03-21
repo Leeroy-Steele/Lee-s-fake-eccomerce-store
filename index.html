@@ -20,11 +20,80 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     
 </head>
 <body>
 
+    <div class="container">
+
+        <h2 class="text-center p-4 text-white" style="background-color: rgb(86, 86, 254);">
+            <span class="iconify p-2" data-icon="arcticons:purchased-apps" data-width="80" data-height="80"></span>
+            Lee's Fake Eccommerce Store
+        </h2>
+
+        <div style="max-width: 422px; margin: auto;">
+            <div class="input-group mb-3 w-50 m-auto" >
+                <div class="input-group-prepend " >
+                    <button onclick="searchForItem()" class="btn btn-outline-secondary" type="button">Search</button>
+                </div>
+                <input id="searchText" type="text" class="form-control" placeholder="eg. Jacket">
+            </div>
+
+            <div class="btn-group btn-group m-auto m-5" data-toggle="buttons">
+                <label class="btn btn-outline-primary">
+                    <input style="width: 50px" onclick="changeCategory(`all`)" type="radio" name="options" id="option1" autocomplete="off" checked> Show All
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input style="width: 50px" onclick="changeCategory(`men's clothing`)" type="radio" name="options" id="option2" autocomplete="off"> Mens Clothing
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input style="width: 50px" onclick="changeCategory(`women's clothing`)" type="radio" name="options" id="option3" autocomplete="off"> Womans Clothes
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input style="width: 50px" onclick="changeCategory(`electronics`)" type="radio" name="options" id="option4" autocomplete="off"> Electronics
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input style="width: 50px" onclick="changeCategory(`jewelery`)" type="radio" name="options" id="option5" autocomplete="off"> Jewelry
+                </label>
+            </div>
+        </div>
+
+        <div id="parentDiv" class="row p-3">
+            <!-- Bootstrap Cards go here -->
+        </div>
+    </div>
     
+    <template id="card-template">
+
+        <div class="card m-1 justify-content-center" style="width: 19rem;">
+
+            <div style="overflow: hidden; height: 350px;">
+                <img class="card-img-top" alt="Card image cap">
+            </div>
+
+            <div class="card-body">
+                <div class="card-icon" style="display:block;"></div>
+                <h5 class="card-title" style="min-height: 100px;"></h5>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item card-price"></li>
+                    <li class="list-group-item card-rating"></li>
+                    <li class="list-group-item card-count"></li>
+                </ul>
+                <br>
+                <p class="card-text" style="min-height: 280px;"></p>
+
+                <div class="text-center">
+                    <button class="btn btn-success" style="margin: auto;">Add to basket</button>
+                </div>
+            </div>
+
+        </div>
+
+    </template>
     
 </body>
 </html>
